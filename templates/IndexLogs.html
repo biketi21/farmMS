@@ -1,0 +1,145 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific CSS Plugins goes HERE  -->
+{% block css_plugins %}
+
+  <link rel="stylesheet" href="{{ ASSETS_ROOT }}/js/select.dataTables.min.css">
+
+{% endblock css_plugins %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="content-wrapper">
+ <div class="row">
+   <div class="col-sm-12">
+     <div class="home-tab">
+<div class="d-sm-flex align-items-center justify-content-between border-bottom">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+    <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+    </li>
+  </ul>
+  <div>
+    <div class="btn-wrapper">
+    <a href="#" class="btn btn-otline-dark align-items-center"><i class="icon-share"></i> Share</a>
+    <a href="#" class="btn btn-otline-dark"><i class="icon-printer"></i> Print</a>
+    <a href="#" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
+    </div>
+  </div>
+</div>
+          <div class="tab-content tab-content-basic">
+          <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+            <div class="card card-rounded">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-6">
+                      <h3>Birth_Logs</h3>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="{% url 'BirthLogsAdd' %} ">
+                    <button class="btn btn-primary btn-lg text-white mb-0 me-0" type="button"><i class="mdi mdi-account-plus"></i>Add New</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+          <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+            <div class="card card-rounded">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-6">
+                      <h3>Harvest_Logs</h3>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="{% url 'HarvestLogsAdd' %} ">
+                    <button class="btn btn-primary btn-lg text-white mb-0 me-0" type="button"><i class="mdi mdi-account-plus"></i>Add New</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+            <div class="card card-rounded">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-6">
+                      <h3>Farm_Input_Logs</h3>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="{% url 'FarmInputLogsAdd' %} ">
+                    <button class="btn btn-primary btn-lg text-white mb-0 me-0" type="button"><i class="mdi mdi-account-plus"></i>Add New</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+            <div class="card card-rounded">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-6">
+                      <h3>Maintenance_Logs</h3>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="{% url 'MaintenanceLogsAdd' %} ">
+                    <button class="btn btn-primary btn-lg text-white mb-0 me-0" type="button"><i class="mdi mdi-account-plus"></i>Add New</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+            <div class="card card-rounded">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-6">
+                      <h3>Medical_Logs</h3>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="{% url 'MedicalLogsAdd' %} ">
+                    <button class="btn btn-primary btn-lg text-white mb-0 me-0" type="button"><i class="mdi mdi-account-plus"></i>Add New</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<br>
+          <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+            <div class="card card-rounded">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-6">
+                      <h3>Planting_Logs</h3>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="{% url 'PlantingLogsAdd' %} ">
+                    <button class="btn btn-primary btn-lg text-white mb-0 me-0" type="button"><i class="mdi mdi-account-plus"></i>Add New</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific CSS Plugins goes HERE  -->
+{% block css_plugins %}
+
+  <link rel="stylesheet" href="{{ ASSETS_ROOT }}/js/select.dataTables.min.css">
+
+{% endblock css_plugins %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="content-wrapper">
+ <div class="row">
+   <div class="col-sm-12">
+     <div class="home-tab">
+       <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+             <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">View Logs</a>
+            </li>
+          </ul>
+          <div class="col-md-6 col-lg-12 grid-margin stretch-card">
+            <div class="card card-rounded">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-6">
+                      <h3>Animal</h3>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="{% url <str:log_name>/add %} ">
+                    <button class="btn btn-primary btn-lg text-white mb-0 me-0" type="button"><i class="mdi mdi-account-plus"></i>Add New Logs</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

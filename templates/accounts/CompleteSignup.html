@@ -1,0 +1,76 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Complete SignUp {% endblock %} 
+
+<!-- Specific CSS Plugins goes HERE  -->
+{% block css_plugins %}
+
+  <link rel="stylesheet" href="{{ ASSETS_ROOT }}/vendors/select2/select2.min.css">
+  <link rel="stylesheet" href="{{ ASSETS_ROOT }}/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+
+{% endblock css_plugins %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+       
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+              <h4 class="card-title">{{request.user.email}}</h4>
+              <p class="card-description">
+                Please fill your personal details below.
+              </p>
+              <form method="post" class="forms-sample">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" class="form-control" required name="Fname" id="fname" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                  <label for="surname">Surname</label>
+                  <input type="text" class="form-control" required name="Surname" id="surname" placeholder="Surname">
+                </div>
+                <div class="form-group">
+                  <label for="ID_Number">ID Number</label>
+                  <input type="text" class="form-control" required name="ID_No" id="ID_Number" placeholder="ID_Number">
+                </div>
+                <div class="form-group">
+                  <label for="Phone_Number">Phone Number</label>
+                  <input type="text" class="form-control" required name="Phone_No" id="Phone_Number" placeholder="Phone_Number">
+                </div>
+                <div class="form-group">
+                  <label for="Farm_Name">Farm Name</label>
+                  <input type="text" class="form-control" required name="Farm_Name" id="Farm_Name" placeholder="Farm_Name">
+                </div>
+                
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific JS Plugins goes HERE  -->
+{% block js_plugins %}
+
+  <script src="{{ ASSETS_ROOT }}/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+  <script src="{{ ASSETS_ROOT }}/vendors/select2/select2.min.js"></script>
+  <script src="{{ ASSETS_ROOT }}/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
+{% endblock js_plugins %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+  <script src="{{ ASSETS_ROOT }}/js/file-upload.js"></script>
+  <script src="{{ ASSETS_ROOT }}/js/typeahead.js"></script>
+  <script src="{{ ASSETS_ROOT }}/js/select2.js"></script>
+
+{% endblock javascripts %}
